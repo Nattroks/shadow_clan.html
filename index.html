@@ -98,7 +98,7 @@
   .section-header .line { width: 48px; height: 2px; background: #fff; margin: 0 auto; }
 
   /* ROSTERS */
-  .rosters-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .rosters-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
   .roster-card { border: 1px solid #1e1e1e; padding: 20px 22px; background: #080808; transition: border-color 0.25s; }
   .roster-card:hover { border-color: #333; }
   .roster-card-head {
@@ -112,6 +112,7 @@
   .player-empty { color: #333; }
   .player-tag { font-size: 10px; letter-spacing: 1.5px; color: #555; background: #111; padding: 2px 7px; border: 1px solid #222; }
   .player-tag.ceo { color: #C8A84B; border-color: #4a3a10; background: #1a1200; }
+  .player-tag.manager { color: #e07b3a; border-color: #5a2e0a; background: #1a0a00; }
 
   /* BOUTIQUE */
   .boutique-wrap {
@@ -188,44 +189,63 @@
 <!-- ROSTERS -->
 <div id="page-rosters" class="page">
   <div class="section">
-    <div class="section-header"><h2>ROSTERS</h2><div class="line"></div></div>
+    <div class="section-header"><h2>ROSTERS</h2><div class="line"></div><p style="color:#555;font-size:12px;letter-spacing:4px;text-transform:uppercase;margin-top:16px;">&#127950; Rocket League</p></div>
     <div class="rosters-grid">
+      <!-- ESPOIRE -->
       <div class="roster-card">
         <div class="roster-card-head">&#128640; ROSTER ESPOIRE <span style="color:#555;font-size:11px;margin-left:4px">(0K9)</span></div>
-        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Nattroks</span><span class="player-tag ceo">CEO</span></div>
-        <div class="player"><span>&#127463;&#127466;</span><span class="player-name">Tom</span></div>
-        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Yrox</span></div>
-        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Emblemadelsteet</span><span class="player-tag">Coach</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Nattroks</span><span class="player-tag ceo">Co-CEO</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">tom.six</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Emblemadelsteet</span><span class="player-tag">&#129373; Coach</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span><span class="player-tag manager">&#127829; Manager</span></div>
       </div>
+      <!-- ASTRAL -->
       <div class="roster-card">
         <div class="roster-card-head">&#10024; ROSTER ASTRAL <span style="color:#555;font-size:11px;margin-left:4px">(1K3)</span></div>
-        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Sce_Emix</span><span class="player-tag ceo">CEO</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Sce_Emix</span><span class="player-tag ceo">&#128081; CEO</span></div>
         <div class="player"><span>&#127467;&#127479;</span><span class="player-name">SCE Chefcurry</span></div>
         <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Emblemadelsteet</span></div>
-        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Lyo</span><span class="player-tag">Coach</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Lyo</span><span class="player-tag">&#129373; Coach</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span><span class="player-tag manager">&#127829; Manager</span></div>
       </div>
+      <!-- TRYOMPHE -->
       <div class="roster-card">
         <div class="roster-card-head">&#127963; ROSTER TRYOMPHE <span style="color:#555;font-size:11px;margin-left:4px">(1K3)</span></div>
         <div class="player"><span>&#127467;&#127479;</span><span class="player-name">CS ZooKA</span></div>
-        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Faze_ch4dow</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Imrane</span></div>
         <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Akaioh</span></div>
-        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Lyo</span><span class="player-tag">Coach</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Lyo</span><span class="player-tag">&#129373; Coach</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span><span class="player-tag manager">&#127829; Manager</span></div>
       </div>
+      <!-- VORTEX -->
       <div class="roster-card">
-        <div class="roster-card-head">&#128640; ROSTER Vortex <span style="color:#555;font-size:11px;margin-left:4px">(1K6)</span></div>
+        <div class="roster-card-head">&#127786; ROSTER VORTEX <span style="color:#555;font-size:11px;margin-left:4px">(1K6)</span></div>
         <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Lyo</span></div>
-        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">ℝ𝕖𝕧𝕪𝕟🇫🇷 </span></div>
-        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">utilisateur-inconnu</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">&#120149;&#120254;&#120165;&#120274;&#120267;</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">lxcas-</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span><span class="player-tag">&#129373; Coach</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Nattroks</span><span class="player-tag manager">&#127829; Manager</span></div>
+      </div>
+      <!-- NOVAX -->
+      <div class="roster-card">
+        <div class="roster-card-head">&#128640; ROSTER NOVAX <span style="color:#555;font-size:11px;margin-left:4px">(1K7)</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">ZeidLate</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">killino</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">samechap</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span><span class="player-tag">&#129373; Coach</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Nattroks</span><span class="player-tag manager">&#127829; Manager</span></div>
+      </div>
+      <!-- REAPERS -->
+      <div class="roster-card">
+        <div class="roster-card-head">&#128128; ROSTER REAPERS <span style="color:#555;font-size:11px;margin-left:4px">(2K)</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Egos x</span></div>
         <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span><span class="player-tag">&#129373; Coach</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Nattroks</span><span class="player-tag manager">&#127829; Manager</span></div>
       </div>
     </div>
-    <div class="roster-card">
-        <div class="roster-card-head">&#128640; ROSTER Reapers <span style="color:#555;font-size:11px;margin-left:4px">(2K)</span></div>
-        <div class="player"><span>&#127468;&#127463;</span><span class="player-name">Egos x</span></div>
-        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">utilisateur-inconnu</span></div>
-        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">utilisateur-inconnu</span></div>
-        <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span></div>
-      </div>
   </div>
 </div>
 
