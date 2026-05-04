@@ -144,6 +144,18 @@
   .rec-banner h3 { font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 3px; margin-bottom: 4px; }
   .rec-banner p { color: #666; font-size: 13px; }
 
+
+  .effectif-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+  .effectif-card { border: 1px solid #1e1e1e; padding: 18px 20px; background: #080808; transition: border-color 0.2s; }
+  .effectif-card:hover { border-color: #333; }
+  .effectif-name { font-family: 'Bebas Neue', sans-serif; font-size: 17px; letter-spacing: 2px; margin-bottom: 6px; }
+  .effectif-role { font-size: 10px; letter-spacing: 2px; padding: 3px 8px; display: inline-block; margin-bottom: 8px; }
+  .effectif-desc { font-size: 12px; color: #666; line-height: 1.6; }
+  .ceo-role { color: #C8A84B; border: 1px solid #4a3a10; background: #1a1200; }
+  .coceo-role { color: #a0c4ff; border: 1px solid #1a3a5a; background: #00101a; }
+  .editor-role { color: #b0f0b0; border: 1px solid #1a4a1a; background: #001200; }
+  .staff-role { color: #ccc; border: 1px solid #333; background: #111; }
+  .admin-role { color: #e07b3a; border: 1px solid #5a2e0a; background: #1a0a00; }
   @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 </style>
@@ -157,6 +169,7 @@
   <ul class="nav-links">
     <li><a onclick="showPage('home')" id="nav-home" class="active">Accueil</a></li>
     <li><a onclick="showPage('rosters')" id="nav-rosters">Rosters</a></li>
+    <li><a onclick="showPage('effectif')" id="nav-effectif">Effectif</a></li>
     <li><a onclick="showPage('boutique')" id="nav-boutique">Boutique</a></li>
     <li><a onclick="showPage('contact')" id="nav-contact">Contact</a></li>
   </ul>
@@ -196,7 +209,7 @@
         <div class="roster-card-head">&#128640; ROSTER ESPOIRE <span style="color:#555;font-size:11px;margin-left:4px">(0K9)</span></div>
         <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Nattroks</span><span class="player-tag ceo">Co-CEO</span></div>
         <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span></div>
-        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">tom.six</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Tom</span></div>
         <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Emblemadelsteet</span><span class="player-tag">&#129373; Coach</span></div>
         <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span><span class="player-tag manager">&#127829; Manager</span></div>
       </div>
@@ -221,8 +234,8 @@
       <!-- VORTEX -->
       <div class="roster-card">
         <div class="roster-card-head">&#127786; ROSTER VORTEX <span style="color:#555;font-size:11px;margin-left:4px">(1K6)</span></div>
-        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Lyo</span></div>
-        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">&#120149;&#120254;&#120165;&#120274;&#120267;</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span></div>
         <div class="player"><span>&#127467;&#127479;</span><span class="player-name">lxcas-</span></div>
         <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span><span class="player-tag">&#129373; Coach</span></div>
         <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Nattroks</span><span class="player-tag manager">&#127829; Manager</span></div>
@@ -230,9 +243,9 @@
       <!-- NOVAX -->
       <div class="roster-card">
         <div class="roster-card-head">&#128640; ROSTER NOVAX <span style="color:#555;font-size:11px;margin-left:4px">(1K7)</span></div>
-        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">ZeidLate</span></div>
-        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">killino</span></div>
-        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">samechap</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Lyo</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">OsX</span></div>
         <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span><span class="player-tag">&#129373; Coach</span></div>
         <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Nattroks</span><span class="player-tag manager">&#127829; Manager</span></div>
       </div>
@@ -240,12 +253,100 @@
       <div class="roster-card">
         <div class="roster-card-head">&#128128; ROSTER REAPERS <span style="color:#555;font-size:11px;margin-left:4px">(2K)</span></div>
         <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Egos x</span></div>
-        <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span></div>
+        <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Tokida</span></div>
         <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span></div>
         <div class="player"><span>&#127467;&#127479;</span><span class="player-name player-empty">—</span><span class="player-tag">&#129373; Coach</span></div>
         <div class="player"><span>&#127467;&#127479;</span><span class="player-name">Nattroks</span><span class="player-tag manager">&#127829; Manager</span></div>
       </div>
     </div>
+  </div>
+</div>
+
+
+<!-- EFFECTIF -->
+<div id="page-effectif" class="page">
+  <div class="section" style="max-width:860px;">
+    <div class="section-header">
+      <h2>EFFECTIF</h2>
+      <div class="line"></div>
+      <p style="color:#555;font-size:12px;letter-spacing:4px;text-transform:uppercase;margin-top:16px;">Shadow Clan Esport – Effectif Officiel</p>
+    </div>
+
+    <!-- Citation -->
+    <div style="text-align:center;margin-bottom:48px;padding:24px 32px;border:1px solid #1a1a1a;background:#080808;">
+      <p style="font-style:italic;color:#888;font-size:16px;letter-spacing:2px;">"Dans l'ombre on s'entraîne, dans la lumière on règne."</p>
+    </div>
+
+    <!-- Direction -->
+    <div style="margin-bottom:40px;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:5px;margin-bottom:4px;display:flex;align-items:center;gap:10px;">&#127959; Direction</div>
+      <div style="width:32px;height:2px;background:#fff;margin-bottom:20px;"></div>
+      <div class="effectif-grid">
+        <div class="effectif-card">
+          <div class="effectif-name">&#128081; Sce_Emix</div>
+          <div class="effectif-role ceo-role">CEO &amp; Président</div>
+          <div class="effectif-desc">CEO &amp; Président de Shadow Clan Esport.</div>
+        </div>
+        <div class="effectif-card">
+          <div class="effectif-name">Nattroks</div>
+          <div class="effectif-role coceo-role">Co-CEO</div>
+          <div class="effectif-desc">Responsable des pôles Fortnite et Rocket League.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Monteur -->
+    <div style="margin-bottom:40px;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:5px;margin-bottom:4px;display:flex;align-items:center;gap:10px;">&#127916; Monteur</div>
+      <div style="width:32px;height:2px;background:#fff;margin-bottom:20px;"></div>
+      <div class="effectif-grid">
+        <div class="effectif-card">
+          <div class="effectif-name">ATOM</div>
+          <div class="effectif-role editor-role">Monteur</div>
+        </div>
+        <div class="effectif-card">
+          <div class="effectif-name">W4R yoroxe</div>
+          <div class="effectif-role editor-role">Monteur</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Staff -->
+    <div style="margin-bottom:40px;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:5px;margin-bottom:4px;display:flex;align-items:center;gap:10px;">&#9881; Staff</div>
+      <div style="width:32px;height:2px;background:#fff;margin-bottom:20px;"></div>
+      <div class="effectif-grid">
+        <div class="effectif-card">
+          <div class="effectif-name">&#128081; Sce_Emix</div>
+          <div class="effectif-role ceo-role">Staff / CEO</div>
+        </div>
+        <div class="effectif-card">
+          <div class="effectif-name">Nattroks</div>
+          <div class="effectif-role coceo-role">Staff / Co-CEO</div>
+        </div>
+        <div class="effectif-card">
+          <div class="effectif-name">SCE Noting</div>
+          <div class="effectif-role staff-role">Staff</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Admin -->
+    <div style="margin-bottom:40px;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:5px;margin-bottom:4px;display:flex;align-items:center;gap:10px;">&#128737; Admin Serveur</div>
+      <div style="width:32px;height:2px;background:#fff;margin-bottom:20px;"></div>
+      <div class="effectif-grid">
+        <div class="effectif-card">
+          <div class="effectif-name">SCE Metox</div>
+          <div class="effectif-role admin-role">Admin</div>
+        </div>
+        <div class="effectif-card">
+          <div class="effectif-name">SCE Rimksoso</div>
+          <div class="effectif-role admin-role">Admin</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -295,8 +396,5 @@ function showPage(name) {
   window.scrollTo(0, 0);
 }
 </script>
- <footer>
-    © 2026 Shadow Clan Esport — Tout droits reservés
-</footer>
 </body>
 </html>
